@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+I am a keen maker living in New Zealand
 
 ### More Information
 
