@@ -8,6 +8,7 @@
     --bags: #00A4A7;
     --clothes: #95CDBA;
     --leather: #6950A1;
+    --courses: rgb(227,32,23);
 }
 
 .w3-theme-l5 {color:#000 !important; background-color:#e9fffd !important}
@@ -42,3 +43,4 @@
 .theme-bags {color:#fff !important; background-color: var(--bags) !important}
 .theme-clothes {color:#fff !important; background-color: var(--clothes) !important}
 .theme-leather {color:#fff !important; background-color: var(--leather) !important}
+.theme-leather {color:#fff !important; background-color: var(--courses) !important}
