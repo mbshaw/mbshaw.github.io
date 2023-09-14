@@ -1,12 +1,12 @@
 title: The Maker's Grail
 author:
   name: Mark Shaw
-  email: your-email@domain.com
+  email: 
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  The Makers Grail is a journey through making covering the skills and treasure encountered along the way.
+  The Maker's Grail is a journey through making, covering the skills and treasure encountered along the way.
 
 # Build settings
 
