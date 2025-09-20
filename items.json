@@ -72,9 +72,6 @@
         {"name":"Bushcraft making","date":"","themes":["wood"]},
         {"name":"Blacksmith intro","date":"","themes":["blacksmith","course"]},
         {"name":"Arctic Kit","date":"","themes":["sewing","course"]},
-        {"name":"","date":"","themes":[]},
-        {"name":"","date":"","themes":[]},
-        {"name":"","date":"","themes":[]},
-        {"name":"","date":"","themes":[]},
+        {"name":"","date":"","themes":[]}
     ]
 }
