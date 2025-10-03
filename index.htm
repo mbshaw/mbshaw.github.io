@@ -16,18 +16,18 @@ body {font-family: "Hammersmith One", sans-serif}
 <body>
 
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#"><img alt="Maker's Grail logo" src="img/MakersGrailLogo.svg" style="width:80%;"></a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="#" onclick="filterGallery('all')"><img alt="Maker's Grail logo" src="img/MakersGrailLogo.svg" style="width:80%;"></a>
   <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
-  <a class="w3-bar-item w3-button theme-blacksmith" href="#">Blacksmith</a>
-  <a class="w3-bar-item w3-button theme-coppersmith" href="#">Coppersmith</a>
-  <a class="w3-bar-item w3-button theme-silversmith" href="#">Silversmith</a>
-  <a class="w3-bar-item w3-button theme-tools" href="#">Tools</a>
-  <a class="w3-bar-item w3-button theme-brewing" href="#">Brewing</a>
-  <a class="w3-bar-item w3-button theme-whisky" href="#">Whisky</a>
-  <a class="w3-bar-item w3-button theme-bags" href="#">Bags</a>
-  <a class="w3-bar-item w3-button theme-clothes" href="#">Clothes</a>
-  <a class="w3-bar-item w3-button theme-leather" href="#">Leather</a>
-  <a class="w3-bar-item w3-button theme-courses" href="#"><i class="fa fa-solid fa-graduation-cap" style="color: #FFF;"></i> Courses</a>
+  <a class="w3-bar-item w3-button theme-blacksmith" href="#" onclick="filterGallery('blacksmith')">Blacksmith</a>
+  <a class="w3-bar-item w3-button theme-coppersmith" href="#" onclick="filterGallery('coppersmith')">Coppersmith</a>
+  <a class="w3-bar-item w3-button theme-silversmith" href="#" onclick="filterGallery('silversmith')">Silversmith</a>
+  <a class="w3-bar-item w3-button theme-tools" href="#" onclick="filterGallery('tools')">Tools</a>
+  <a class="w3-bar-item w3-button theme-brewing" href="#" onclick="filterGallery('brewing')">Brewing</a>
+  <a class="w3-bar-item w3-button theme-whisky" href="#" onclick="filterGallery('whisky')">Whisky</a>
+  <a class="w3-bar-item w3-button theme-bags" href="#" onclick="filterGallery('bags')">Bags</a>
+  <a class="w3-bar-item w3-button theme-clothes" href="#" onclick="filterGallery('clothes')">Clothes</a>
+  <a class="w3-bar-item w3-button theme-leather" href="#" onclick="filterGallery('leather')">Leather</a>
+  <a class="w3-bar-item w3-button theme-courses" href="#" onclick="filterGallery('course')"><i class="fa fa-solid fa-graduation-cap" style="color: #FFF;"></i> Courses</a>
 </nav>
 
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
@@ -46,7 +46,9 @@ body {font-family: "Hammersmith One", sans-serif}
 
 <div class="w3-container" style="padding:32px">
 
-
+<div id="gallery" class="w3-row-padding">
+  <!-- Gallery items will be inserted here by JavaScript -->
+</div>
 
 </div>
 
@@ -86,10 +88,75 @@ function myAccordion(id) {
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-theme";
-  } else { 
+  } else {
     x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
+    x.previousElementSibling.className =
     x.previousElementSibling.className.replace(" w3-theme", "");
+  }
+}
+
+// Gallery functionality
+let allItems = [];
+let currentFilter = 'all';
+
+// Load items from JSON
+fetch('items.json')
+  .then(response => response.json())
+  .then(data => {
+    allItems = data.items.filter(item => item.name); // Filter out empty items
+    renderGallery();
+  })
+  .catch(error => console.error('Error loading items:', error));
+
+function renderGallery() {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
+
+  const itemsToShow = currentFilter === 'all'
+    ? allItems
+    : allItems.filter(item => item.themes.includes(currentFilter));
+
+  itemsToShow.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'w3-col l3 m4 s6 w3-margin-bottom';
+
+    // Get primary theme for color
+    const primaryTheme = item.themes[0] || 'blacksmith';
+    const themeClass = `theme-${primaryTheme}`;
+
+    // Create slug from name for URL
+    const slug = item.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+    card.innerHTML = `
+      <div class="w3-card-4">
+        <header class="w3-container ${themeClass}">
+          <h3>${item.name}</h3>
+        </header>
+        <div class="w3-container" style="min-height: 80px; display: flex; align-items: center; justify-content: center; padding: 16px;">
+          <p style="margin: 0;">${item.themes.map(t => `<span class="w3-tag w3-round w3-small" style="margin: 2px;">${t}</span>`).join(' ')}</p>
+        </div>
+        <footer class="w3-container ${themeClass}">
+          <a href="projects/${slug}.html" class="w3-button w3-block" style="text-decoration: none;">View Project</a>
+        </footer>
+      </div>
+    `;
+
+    gallery.appendChild(card);
+  });
+
+  // Show message if no items
+  if (itemsToShow.length === 0) {
+    gallery.innerHTML = '<div class="w3-panel w3-pale-yellow w3-border"><p>No projects found for this theme.</p></div>';
+  }
+}
+
+function filterGallery(theme) {
+  currentFilter = theme;
+  renderGallery();
+
+  // Close mobile menu if open
+  if (window.innerWidth < 993) {
+    w3_close();
   }
 }
 </script>
