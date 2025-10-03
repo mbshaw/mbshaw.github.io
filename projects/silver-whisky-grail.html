@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Project Name - The Maker's Grail</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="../mg-theme.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Hammersmith One", sans-serif}
+.project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.step-section {
+  margin-bottom: 32px;
+}
+.step-section h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large" href="../index.htm"><img alt="Maker's Grail logo" src="../img/MakersGrailLogo.svg" style="width:80%;"></a>
+  <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
+  <a class="w3-bar-item w3-button theme-blacksmith" href="../index.htm" onclick="localStorage.setItem('filter', 'blacksmith')">Blacksmith</a>
+  <a class="w3-bar-item w3-button theme-coppersmith" href="../index.htm" onclick="localStorage.setItem('filter', 'coppersmith')">Coppersmith</a>
+  <a class="w3-bar-item w3-button theme-silversmith" href="../index.htm" onclick="localStorage.setItem('filter', 'silversmith')">Silversmith</a>
+  <a class="w3-bar-item w3-button theme-tools" href="../index.htm" onclick="localStorage.setItem('filter', 'tools')">Tools</a>
+  <a class="w3-bar-item w3-button theme-brewing" href="../index.htm" onclick="localStorage.setItem('filter', 'brewing')">Brewing</a>
+  <a class="w3-bar-item w3-button theme-whisky" href="../index.htm" onclick="localStorage.setItem('filter', 'whisky')">Whisky</a>
+  <a class="w3-bar-item w3-button theme-bags" href="../index.htm" onclick="localStorage.setItem('filter', 'bags')">Bags</a>
+  <a class="w3-bar-item w3-button theme-clothes" href="../index.htm" onclick="localStorage.setItem('filter', 'clothes')">Clothes</a>
+  <a class="w3-bar-item w3-button theme-leather" href="../index.htm" onclick="localStorage.setItem('filter', 'leather')">Leather</a>
+  <a class="w3-bar-item w3-button theme-courses" href="../index.htm" onclick="localStorage.setItem('filter', 'course')"><i class="fa fa-solid fa-graduation-cap" style="color: #FFF;"></i> Courses</a>
+</nav>
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:250px;">
+
+<div id="myTop" class="w3-container w3-top w3-theme w3-large">
+  <p><i class="fa fa-bars w3-button w3-hide-large w3-xlarge" onclick="w3_open()"></i>
+  <span id="myIntro" class="w3-hide">The Maker's Grail</span></p>
+</div>
+
+<!-- Change the theme class below to match your project's primary theme -->
+<header class="w3-container theme-silversmith" style="padding:42px 32px">
+  <h1 class="w3-xxxlarge">Silver Whisky Grail</h1>
+  <p><a href="../index.htm" class="w3-button w3-white w3-round"><i class="fa fa-arrow-left"></i> Back to Gallery</a></p>
+</header>
+
+<div class="w3-container" style="padding:32px">
+
+  <!-- Project Info Section -->
+  <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue">
+    <p><strong>Date:</strong> Month/Year</p>
+    <p><strong>Themes:</strong>
+      <span class="w3-tag w3-round">theme1</span>
+      <span class="w3-tag w3-round">theme2</span>
+    </p>
+  </div>
+
+  <!-- Main Project Images -->
+  <div class="w3-row-padding">
+    <div class="w3-col m6 l4">
+      <img src="../img/project-name/image1.jpg" alt="Project photo 1" class="project-image">
+    </div>
+    <div class="w3-col m6 l4">
+      <img src="../img/project-name/image2.jpg" alt="Project photo 2" class="project-image">
+    </div>
+    <div class="w3-col m6 l4">
+      <img src="../img/project-name/image3.jpg" alt="Project photo 3" class="project-image">
+    </div>
+  </div>
+
+  <!-- Project Description -->
+  <div class="step-section">
+    <h2>About This Project</h2>
+    <p>Describe your project here. What inspired you to make it? What was the goal?</p>
+  </div>
+
+  <!-- Materials Section -->
+  <div class="step-section">
+    <h2>Materials & Tools</h2>
+    <ul>
+      <li>Material 1</li>
+      <li>Material 2</li>
+      <li>Tool 1</li>
+      <li>Tool 2</li>
+    </ul>
+  </div>
+
+  <!-- Step-by-Step Process -->
+  <div class="step-section">
+    <h2>The Process</h2>
+
+    <h3>Step 1: Preparation</h3>
+    <p>Describe what you did in this step.</p>
+    <img src="../img/project-name/step1.jpg" alt="Step 1" class="project-image">
+
+    <h3>Step 2: Main Work</h3>
+    <p>Describe the main work process.</p>
+    <img src="../img/project-name/step2.jpg" alt="Step 2" class="project-image">
+
+    <h3>Step 3: Finishing</h3>
+    <p>Describe the finishing touches.</p>
+    <img src="../img/project-name/step3.jpg" alt="Step 3" class="project-image">
+  </div>
+
+  <!-- Lessons Learned -->
+  <div class="step-section">
+    <h2>What I Learned</h2>
+    <ul>
+      <li>Key learning or challenge you overcame</li>
+      <li>Technique you mastered</li>
+      <li>What you'd do differently next time</li>
+    </ul>
+  </div>
+
+  <!-- Final Result -->
+  <div class="step-section">
+    <h2>Final Result</h2>
+    <p>Describe the finished project and how you feel about it.</p>
+    <div class="w3-center">
+      <img src="../img/project-name/final.jpg" alt="Final result" style="max-width: 600px; width: 100%; border-radius: 4px;">
+    </div>
+  </div>
+
+</div>
+
+<footer class="w3-container w3-theme" style="padding:32px">
+  <p><a href="../index.htm" class="w3-button w3-white w3-round"><i class="fa fa-arrow-left"></i> Back to Gallery</a></p>
+</footer>
+
+</div>
+
+<script>
+// Open and close the sidebar on medium and small screens
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Change style of top container on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("myTop").classList.add("w3-card-4", "w3-animate-opacity");
+    document.getElementById("myIntro").classList.add("w3-show-inline-block");
+  } else {
+    document.getElementById("myIntro").classList.remove("w3-show-inline-block");
+    document.getElementById("myTop").classList.remove("w3-card-4", "w3-animate-opacity");
+  }
+}
+</script>
+
+</body>
+</html>
