@@ -1,0 +1,675 @@
+﻿ParagraphID,Description,ControlID,Classification,Compliance,GCSB Tags,chapterTitle,ChapterNo,SectionName,SectionNo,BlockName,BlockNo,Logging
+11.8.13.C.01.,"Use of MFDs for printing, scanning, and copying purposes SHOULD be centrally logged.",7537,"Top Secret, Secret, Confidential",Should,"Communications systems,Event Logging",Communications Systems and Devices,11,"Multifunction Devices, Network Printers and Fax Machines",11.8,Logging multifunction device use,11.8.13,Y
+13.3.9.C.01.,Data transfers between systems of different classification SHOULD be logged in an auditable log or register.,4111,All Classifications,Should,"Technical,Data Transfers,Media Management","Media and IT Equipment Management, Decommissioning and Disposal",13,Media Usage,13.3,Using media for data transfers,13.3.9,Y
+14.1.8.C.01.,"Agencies SHOULD develop a hardened SOE for workstations and servers, covering:
+removal of unneeded software and operating system components;
+removal or disabling of unneeded services, ports and BIOS settings;
+disabling of unused or undesired functionality in software and operating systems;
+implementation of access controls on relevant objects to limit system users and programs to the minimum access required;
+installation of antivirus and anti-malware software;
+installation of software-based firewalls limiting inbound and outbound network connections; 
+configuration of either remote logging or the transfer of local event logs to a central server; and
+protection of audit and other logs through the use of a one way pipe to reduce likelihood of compromise key transaction records.
+",1149,All Classifications,Should,"Technical,Software Security,Standard Operating Environments",Software security,14,Standard Operating Environments,14.1,Developing hardened SOEs,14.1.8,Y
+14.3.6.C.02.,"An agency’s Web proxy SHOULD authenticate system users and provide logging that includes at least the following details about websites accessed:
+address (uniform resource locator);
+time/date;
+system user;
+internal IP address; and
+external IP address.
+",1593,All Classifications,Should,"Technical,Software Security,Web Applications",Software security,14,Web Applications,14.3,Web proxy,14.3.6,Y
+15.2.40.C.02,Agencies SHOULD configure systems to log every occurrence of a blocked email.,1761,All Classifications,Should,"Technical,Email,Email Infrastructure,Email Security",Email security,15,Email Infrastructure,15.2,Blocking of outbound emails,15.2.40,Y
+15.2.41.C.01,"Agencies MUST configure email systems to reject, log and report inbound emails with protective markings indicating that the content of the email exceeds the accreditation of the receiving system.",1764,All Classifications,Must,"Technical,Email,Email Infrastructure,Email Security",Email security,15,Email Infrastructure,15.2,Blocking of inbound emails,15.2.41,Y
+16.1.28.C.01.,"If agencies choose to allow shared, non user-specific accounts they MUST ensure that an independent means of determining the identification of the system user is implemented and logged.",1837,All Classifications,Must,"Technical,Access Control,Passwords,Authentication",Authentication and Access Controls,16,"Identification, Authentication and Authorisation",16.1,System user identification for shared accounts,16.1.28,Y
+16.1.42.C.01.,"Agencies MUST:
+
+Record all successful and failed logon attempts;
+lock system user accounts after three failed logon attempts;
+use a temporary lock out feature to unlock system (max [] times);
+have a system administrator reset locked accounts if [] times is superseded;
+remove or suspend system user accounts as soon as possible when personnel no longer need access due to changing roles or leaving the organisation; and
+remove or suspend inactive accounts after a specified number of days.
+
+NB: Agencies can determine the risk of using a temporary lock out feature on their specific systems.
+[] indicates the chosen 'value of times' an agency has decided to use for the temporary lock out feature.",1892,All Classifications,Must,"Technical,Access Control,Passwords,Authentication",Authentication and Access Controls,16,"Identification, Authentication and Authorisation",16.1,Suspension of access,16.1.42,Y
+16.4.41.C.01.,"Agencies MUST create, implement and maintain a robust system of continuous discovery, monitoring and review of privileged accounts and the access rights and credentials associated with those accounts.",6859,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging,privileged access",Authentication and Access Controls,16,Privileged Access Management,16.4, Monitoring and Review,16.4.41,Y
+16.4.41.C.02.,"Privileged account monitoring systems MUST monitor and record:
+
+individual user activity, including exceptions such as out of hours access;
+activity from unauthorised sources;
+any unusual use patterns; and
+any creation of unauthorised privileges access credentials.
+",6860,All Classifications,Must,"Governance,Access Control,Incident Management,Passwords,Event Logging,Information Security Incidents,privileged access",Authentication and Access Controls,16,Privileged Access Management,16.4, Monitoring and Review,16.4.41,Y
+16.4.41.C.03.,Agencies MUST protect and limit access to activity and audit logs and records.,6861,All Classifications,Must,"Governance,Access Control,Incident Management,Passwords,Event Logging,Information Security Incidents,privileged access",Authentication and Access Controls,16,Privileged Access Management,16.4, Monitoring and Review,16.4.41,Y
+16.5.11.C.01.,"Agencies MUST NOT allow the use of remote privileged access from an untrusted domain, including logging in as an unprivileged system user and then escalating privileges.",1977,"Top Secret, Secret, Confidential",Must Not,"Technical,Access Control,Passwords",Authentication and Access Controls,16,Remote Access,16.5,Remote privileged access,16.5.11,Y
+16.5.11.C.02.,"Agencies SHOULD NOT allow the use of remote privileged access from an untrusted domain, including logging in as an unprivileged system user and then escalating privileges.",1978,All Classifications,Should Not,"Technical,Access Control,Passwords",Authentication and Access Controls,16,Remote Access,16.5,Remote privileged access,16.5.11,Y
+16.6.10.C.01.,"Agencies SHOULD log the events listed in the table below for specific software components.
+
+
+Software component
+Events to log
+
+
+Database
+
+System user access to the database.
+
+
+
+ 
+
+Attempted access that is denied.
+
+
+
+ 
+
+Changes to system user roles or database rights.
+
+
+
+ 
+
+Addition of new system users, especially privileged users.
+
+
+
+ 
+
+Modifications to the data.
+
+
+
+ 
+
+Modifications to the format or structure of the database.
+
+
+
+Network/operating system
+
+Successful and failed attempts to logon and logoff.
+
+
+
+ 
+
+Changes to system administrator and system user accounts.
+
+
+
+ 
+
+Failed attempts to access data and system resources.
+
+
+
+ 
+
+Attempts to use special privileges.
+
+
+
+ 
+
+Use of special privileges.
+
+
+
+ 
+
+System user or group management.
+
+
+
+ 
+
+Changes to the security policy.
+
+
+
+ 
+
+Service failures and restarts.
+
+
+
+ 
+
+System startup and shutdown.
+
+
+
+ 
+
+Changes to system configuration data.
+
+
+
+ 
+
+Access to sensitive data and processes.
+
+
+
+ 
+Data import/export operations.
+
+
+
+Web application
+
+
+System user access to the Web application.
+
+
+
+ 
+
+Attempted access that is denied.
+
+
+
+ 
+
+System user access to the Web documents.
+
+
+
+ 
+
+Search engine queries initiated by system users.
+
+
+
+",2012,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Additional events to be logged,16.6.10,Y
+16.6.10.C.02.,"
+Agencies SHOULD log, at minimum, the following events for all software components:&nbsp;
+
+
+
+Any login activity or attempts;&nbsp;all privileged operations;
+failed attempts to elevate&nbsp;privileges;&nbsp;
+security related system alerts and&nbsp;failures;&nbsp;
+all software updates and/or patching;
+system user and group additions,&nbsp;deletions and modification to permissions; and&nbsp;
+unauthorised&nbsp;or failed access attempts to systems and files identified as critical to the organisation.
+
+",2013,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Additional events to be logged,16.6.10,Y
+16.6.11.C.01.,"For each event identified as needing to be logged, agencies MUST ensure that the log facility records at least the following details, where applicable:
+date and time of the event;
+relevant system user(s) or processes;
+event description;
+success or failure of the event;
+event source (e.g. application name); and
+IT equipment location/identification.
+",2017,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log facility,16.6.11,Y
+16.6.11.C.02.,Agencies SHOULD establish an authoritative time source.,2018,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log facility,16.6.11,Y
+16.6.11.C.03.,Agencies SHOULD synchronise all logging and audit trails with the time source to allow accurate time stamping of events.,2019,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log facility,16.6.11,Y
+16.6.12.C.01.,"
+Event logs MUST be protected from:&nbsp;
+
+
+
+modification;
+unauthorised access; and
+whole or partial loss within the defined retention period.&nbsp;
+
+",2022,All Classifications,Must,"Technical,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log protection,16.6.12,Y
+16.6.12.C.02.,Agencies MUST configure systems to save event logs to separate secure servers as soon as possible after each event occurs.,2023,"Top Secret, Secret, Confidential",Must,"Technical,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log protection,16.6.12,Y
+16.6.12.C.03.,"Agencies SHOULD ensure that:
+systems are configured to save event logs to a separate secure log server; and
+event log data is archived in a manner that maintains its integrity.
+",2024,All Classifications,Should,"Technical,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log protection,16.6.12,Y
+16.6.13.C.01.,Event logs MUST be archived and retained for an appropriate period as determined by the agency.,2028,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log archives,16.6.13,Y
+16.6.13.C.02.,"Disposal or archiving of DNS, proxy, event, systems and other operational logs MUST be in accordance with the provisions of the relevant legislation.",2029,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log archives,16.6.13,Y
+16.6.13.C.03.,Agencies SHOULD seek advice and determine if their logs are subject to legislation.,2030,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log archives,16.6.13,Y
+16.6.13.C.04.,"Agencies SHOULD retain DNS, proxy and event logs for a minimum of 12 months.",2031,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log archives,16.6.13,Y
+16.6.13.C.05.,Agencies should prioritise their log retention requirements based on the risks surrounding their most sensitive systems.,7557,All Classifications,Should,"Technical,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log archives,16.6.13,Y
+16.6.14.C.01.,"Agencies MUST develop and document event log audit requirements covering:
+the scope of audits;
+the audit schedule;
+action to be taken when violations are detected;
+reporting requirements; and
+roles and specific responsibilities.
+",2034,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log auditing,16.6.14,Y
+16.6.15.C.01.,Agencies SHOULD have a monitoring solution implemented that enables detection of incidents as they occur so that appropriate responses can be taken in adequate timeframes.,7560,All Classifications,Should,"Technical,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log monitoring,16.6.15,Y
+16.6.15.C.02.,"Agencies SHOULD have systems available for processing system event logs to identify and correlate events which indicate behavioural anomalies or potential security compromise in the systems, in a near real-time manner.",7561,All Classifications,Should,"Technical,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Event log monitoring,16.6.15,Y
+16.6.6.C.01.,Agencies MUST maintain system management logs for the life of a system.,1997,Top Secret,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Maintaining system management logs,16.6.6,Y
+16.6.6.C.02.,Agencies SHOULD determine a policy for the retention of system management logs.,1998,All Classifications,Should,"Governance,Information Security Documentation,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Maintaining system management logs,16.6.6,Y
+16.6.7.C.01.,"A system management log SHOULD record the following minimum information:
+
+all&nbsp;system start-up and shutdown;
+all system changes;
+user&nbsp;changes;
+service, application,&nbsp;component or system failures;
+maintenance&nbsp;activities;
+backup and archival&nbsp;activities;
+system recovery activities; and
+special or out of hours activities.&nbsp;
+",2001,All Classifications,Should,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Content of system management logs,16.6.7,Y
+16.6.8.C.01.,"Agencies MUST develop and document logging requirements covering:
+the logging facility, including:
+
+log server availability requirements; and
+the reliable delivery of log information to the log server;
+
+
+the list of events associated with a system or software component to be logged; and
+event log protection and archival requirements.
+",2006,All Classifications,Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Logging requirements,16.6.8,Y
+16.6.9.C.01.,"
+
+Agencies MUST log, at minimum, the following events for all software components:&nbsp;
+
+
+
+any login activity or attempts;&nbsp;
+date and&nbsp;time;
+all privileged&nbsp;operations;
+failed attempts to elevate&nbsp;privileges;
+security related system alerts and&nbsp;failures;
+software upgrades and/or software&nbsp;patching;
+system recovery&nbsp;activities;
+system user and group additions,&nbsp;deletions and modification to permissions; and&nbsp;
+unauthorised or failed access attempts to systems and files identified as critical to the&nbsp;organisation.
+
+
+",2009,"Top Secret, Secret, Confidential",Must,"Governance,Access Control,Passwords,Event Logging",Authentication and Access Controls,16,"Event Monitoring, Logging and Auditing",16.6,Events to be logged,16.6.9,Y
+16.7.42.C.07.,"The design of an agency MFA SHOULD include consideration of:
+
+Risk identification;
+Level of security and access control appropriate for each aspect of an organisation’s information systems (data, devices, equipment, storage, cloud, etc.)
+A formal authorisation process for user system access and entitlements;
+Logging,&nbsp;monitoring and reporting of activity;
+Review of logs for orphaned accounts and inappropriate user access including unsuccessful authentication;
+Identification of error and anomalies which may indicate inappropriate or malicious activity;
+Incident response;
+Remediation of errors;
+Suspension and/or revocation of access rights where policy violations occur;
+Capacity planning.
+",6952,All Classifications,Should,"Technical,Access Control,Passwords,Authentication,MFA",Authentication and Access Controls,16,Multi-Factor Authentication,16.7,System Architecture and Security Controls,16.7.42,Y
+17.5.6.C.01.,"The table below outlines the settings that SHOULD be implemented when using SSH.
+
+
+
+Configuration description
+
+
+Configuration directive
+
+
+
+
+Disallow the use of SSH version 1
+
+
+Protocol 2
+
+
+
+
+On machines with multiple interfaces, configure the SSH daemon to listen only on the required interfaces
+
+ListenAddress xxx.xxx.xxx.xxx
+
+
+
+Disable connection forwarding
+
+
+AllowTCPForwarding no
+
+
+
+
+Disable gateway ports
+
+
+Gatewayports no
+
+
+
+
+Disable the ability to login directly as root
+
+
+PermitRootLogin no
+
+
+
+
+Disable host-based authentication
+
+
+HostbasedAuthentication no
+
+
+
+
+Disable rhosts-based authentication
+
+
+RhostsAuthentication noIgnoreRhosts yes
+
+
+
+
+Do not allow empty passwords
+
+PermitEmptyPasswords no
+
+
+Configure a suitable login banner
+Banner/directory/filename
+
+
+Configure a login authentication timeout of no more than 60 seconds
+LoginGraceTime xx
+
+
+Disable X forwarding 
+X11Forwarding no
+
+
+",2647,All Classifications,Should,"Cryptography,Technical",Cryptography,17,Secure Shell,17.5,Using SSH,17.5.6,Y
+18.3.19.C.01.,"A Denial of Service response plan SHOULD include monitoring and use of:
+router and switch logging and flow data;
+packet captures;
+proxy and call manager logs and access control lists;
+VTC and IPT aware firewalls and voice gateways;
+network redundancy;
+load balancing; 
+PSTN failover; and
+alternative communication paths.
+",3785,All Classifications,Should,"Network Security,Technical",Network security,18,Video & Telephony Conferencing and Internet Protocol Telephony,18.3,Content of a Denial of Service (DoS) response plan,18.3.19,Y
+18.4.11.C.01.,"In addition to agency defined configuration requirements, agencies SHOULD ensure that IDS/IPSs located inside a firewall are configured to generate a log entry, and an alert, for any information flows that contravene any rule within the firewall rule set.",3857,All Classifications,Should,"Network Security,Technical",Network security,18,Intrusion Detection and Prevention,18.4,Configuring the IDS/IPS,18.4.11,Y
+18.4.12.C.01.,"Agencies SHOULD deploy tools for:
+the management and archive of security event information; and
+the correlation of suspicious events or events of interest across all agency networks.
+",3875,All Classifications,Should,"Network Security,Technical,Event Logging",Network security,18,Intrusion Detection and Prevention,18.4,Event management and correlation,18.4.12,Y
+18.4.7.C.01.,"Agencies MUST develop, implement and maintain an intrusion detection strategy that includes:
+appropriate intrusion detection mechanisms, including network-based IDS/IPSs and host-based IDS/IPSs as necessary;
+the audit analysis of event logs, including IDS/IPS logs;
+a periodic audit of intrusion detection procedures;
+information security awareness and training programs;
+a documented Incident Response Plans (IRP); and
+provide the capability to detect information security incidents and attempted network intrusions on gateways and provide real-time alerts.
+",3802,"Top Secret, Secret, Confidential",Must,"Network Security,Technical",Network security,18,Intrusion Detection and Prevention,18.4,Intrusion Detection and Prevention strategy (IDS/IPS),18.4.7,Y
+18.4.7.C.02.,"Agencies SHOULD develop, implement and maintain an intrusion detection strategy that includes:
+appropriate intrusion detection mechanisms, including network-based IDS/IPSs and host-based IDS/IPSs as necessary;
+the audit analysis of event logs, including IDS/IPS logs;
+a periodic audit of intrusion detection procedures;
+information security awareness and training programs; and
+a documented IRP.
+",3803,All Classifications,Should,"Network Security,Technical",Network security,18,Intrusion Detection and Prevention,18.4,Intrusion Detection and Prevention strategy (IDS/IPS),18.4.7,Y
+18.5.8.C.04.,Dynamically assigned IPv6 addresses SHOULD be configured with DHCPv6 in a stateful manner and with lease information logged and logs stored in a centralised logging facility.,3965,All Classifications,Should,"Network Security,Technical",Network security,18,Internet Protocol Version 6,18.5,Using IPv6,18.5.8,Y
+19.1.12.C.01.,"Agencies MUST ensure that gateways:
+are the only communications paths into and out of internal networks;
+by default, deny all connections into and out of the network;
+allow only explicitly authorised connections;
+are managed via a secure path isolated from all connected networks (i.e.  physically at the gateway or on a dedicated administration network);
+provide sufficient logging and audit capabilities to detect information security incidents, attempted intrusions or anomalous usage patterns; and
+provide real-time alerts.
+",3562,All Classifications,Must,"Technical,Gateways,Gateway Security",Gateway security,19,Gateways,19.1,Configuration of gateways,19.1.12,Y
+19.1.13.C.01.,"Agencies MUST ensure that all gateways connecting networks in different security domains:
+include a firewall of an appropriate assurance level on all gateways to filter and log network traffic attempting to enter the gateway;
+are configured to save event logs to a separate, secure log server;
+are protected by authentication, logging and audit of all physical access to gateway components; and
+have all controls tested to verify their effectiveness after any changes to their configuration.
+",3578,All Classifications,Must,"Technical,Gateways,Gateway Security",Gateway security,19,Gateways,19.1,Operation of gateways,19.1.13,Y
+19.2.20.C.01.,All data exported from a security domain MUST be logged.,3936,"Secret, Top Secret, Confidential",Must,"Technical,Gateway Security",Gateway security,19,Cross Domain Solutions (CDS),19.2,Operation of the Cross Domain Solution,19.2.20,Y
+19.5.27.C.02.,"Agencies MUST provide a protected communication channel for administrators, and authorised systems personnel.  Such communication MUST be logged.",4738,All Classifications,Must,"Technical,Access Control,Gateway Security",Gateway security,19,Session Border Controllers,19.5,Access Control,19.5.27,Y
+19.5.27.C.06.,Event logs covering all VoIP and UC services SHOULD be maintained in accordance with the requirements of the NZISM. See sections 16.6 - Event Logging and Auditing and 13.1.12 - Archiving.,4742,All Classifications,Should,"Technical,Access Control,Gateway Security",Gateway security,19,Session Border Controllers,19.5,Access Control,19.5.27,Y
+2.2.5.C.01.,Agencies engaging industry for the provision of off-site information technology services and functions MUST accredit the systems used by the contractor to at least the same minimum standard as the agency’s systems. This may be achieved through a third party review report utilising the ISAE 3402 Assurance Reports on Controls at a Third Party Service Organisation.,216,All Classifications,Must,Governance,Information Security Services within Government,2,Non-Government Engagement and Outsourcing,2.2,Outsourcing information technology services and functions,2.2.5,Y
+2.2.5.C.02.,"Agencies SHOULD NOT engage industry for the provision of off-site information technology services and functions in countries that New Zealand does not have a multilateral or bilateral security agreement with for the protection of classified information of the government of New Zealand. If there is any doubt, the agency’s CISO should be consulted.",217,All Classifications,Should Not,Governance,Information Security Services within Government,2,Non-Government Engagement and Outsourcing,2.2,Outsourcing information technology services and functions,2.2.5,Y
+2.3.25.C.02.,"An agency’s cloud adoption plan SHOULD cover:
+Outcomes and benefits that the adoption of cloud technologies will bring;
+Risks introduced or mitigated through the use of cloud, and the agency’s risk tolerance;
+Financial and cost accounting models;
+Shared responsibility models;
+Cloud deployment models;
+Cloud security strategy;
+Resilience and recovery approaches;
+Data recovery on contract termination;
+Cloud exit strategy and other contractual arrangements; and
+A high level description of the foundation services that enable cloud adoption, including:
+
+User, device and system identity;
+Encryption and key management;
+Information management;
+Logging and alerting;
+Incident management;
+Managing privileged activities; and
+Cost management.
+
+
+",7046,All Classifications,Should,"Cloud Computing,Governance,Public cloud security",Information Security Services within Government,2,Using Cloud Services,2.3,Cloud Adoption Strategy,2.3.25,Y
+20.1.10.C.02.,"Agencies importing data to a system MUST implement the following controls:
+scanning for malicious and active content;
+data format checks;
+identify unexpected attachments or embedded objects;
+log each event; and
+monitoring to detect overuse/unusual usage patterns.
+",4168,"Top Secret, Confidential, Secret",Must,"Data Management,Technical,Data Transfers",Data management,20,Data Transfers,20.1,Import of data,20.1.10,Y
+20.1.11.C.01.,"When agencies export formatted textual data with no free text fields and all fields have a predefined set of permitted formats and data values, agencies MUST implement the following controls:
+protective marking checks;
+data validation and format checks;
+size limits;
+keyword checks;
+identify unexpected attachments or embedded objects;
+log each event; and
+monitoring to detect overuse/unusual usage patterns.
+",4239,"Confidential, Secret, Top Secret",Must,"Data Management,Technical,Data Transfers",Data management,20,Data Transfers,20.1,Export of highly formatted textual data,20.1.11,Y
+20.1.12.C.01.,"When agencies export data, other than highly formatted textual data, agencies MUST implement the following controls:
+protective marking checks;
+data validation and format checks;
+limitations on data types;
+size limits;
+keyword checks;
+identify unexpected attachments or embedded objects;
+log each event; and
+monitoring to detect overuse/unusual usage patterns.
+",4245,"Confidential, Top Secret, Secret",Must,"Data Management,Technical,Data Transfers",Data management,20,Data Transfers,20.1,Export of other data,20.1.12,Y
+20.2.6.C.02.,"When agencies import data to a system through gateways, full or partial audits of the event logs MUST be performed at least monthly.",4281,"Confidential, Top Secret, Secret",Must,"Data Management,Technical,Data Transfers,Gateways",Data management,20,Data Import and Export,20.2,Import of data through gateways,20.2.6,Y
+20.2.8.C.01.,"When the export of highly formatted textual data occurs through gateways agencies MUST implement:
+checks for protective markings;
+data filtering performed by a product specifically designed for that purpose;
+data range and data type checks; and
+full or partial audits of the event logs performed at least monthly.
+",4289,"Top Secret, Confidential, Secret",Must,"Data Management,Technical,Data Transfers,Gateways",Data management,20,Data Import and Export,20.2,Export of highly formatted textual data through gateways,20.2.8,Y
+20.2.9.C.02.,When agencies do not perform audits of the complete data transfer logs at least monthly they MUST perform randomly timed audits of random subsets of the data transfer logs on a weekly basis.,4293,"Top Secret, Confidential, Secret",Must,"Data Management,Technical,Data Transfers,Gateways",Data management,20,Data Import and Export,20.2,Export of other data through gateways,20.2.9,Y
+20.2.9.C.04.,When the export of other data occurs through gateways agencies SHOULD perform audits of the complete data transfer logs at least monthly.,4295,"Top Secret, Confidential, Secret",Should,"Data Management,Technical,Data Transfers,Gateways",Data management,20,Data Import and Export,20.2,Export of other data through gateways,20.2.9,Y
+20.3.15.C.02.,"When importing data to each security domain, including through a gateway, agencies MUST audit the complete data transfer logs at least monthly.",4421,"Secret, Confidential, Top Secret",Must,"Data Management,Technical,Content Filtering",Data management,20,Content Filtering,20.3,Monitoring data import and export,20.3.15,Y
+20.4.5.C.01.,Agencies MUST enable logging and auditing of system users’ actions.,4444,Top Secret,Must,"Data Management,Governance",Data management,20,Databases,20.4,Accountability,20.4.5,Y
+21.4.11.C.12.,"BYOD MUST have a Mobile Device Management (MDM) solution implemented with a minimum of the following enabled:
+The MDM is enabled to “wipe” devices of any agency data if lost or stolen;
+If the MDM cannot discriminate between agency and personal data, all data, including personal data, is deleted if the device is lost or stolen;
+The MDM is capable of remotely applying agency security configurations for BYOD devices;
+Mobile device security configurations are validated (health check) by the MDM before a device is permitted to connect to the agency’s systems;
+“Jail-broken”, “rooted” or settings violations MUST be detected and isolated; 
+“Jail-broken” devices are NOT permitted to access agency resources; 
+Access to agency resources is limited until both the device and user is fully compliant with policy and SOPs;
+Auditing and logging is enabled; and
+Changes of Subscriber Identity Module (SIM) card are monitored to allow remote blocking and wiping in the event of theft or compromise.
+",4666,All Classifications,Must,"Infrastructure,Technical,Mobile Devices,BYOD",Distributed Working,21,Non-Agency Owned Devices and Bring Your Own Device (BYOD),21.4,BYOD Infrastructure and System Controls,21.4.11,Y
+23.5.10.C.01.,Agencies MUST understand the range of logging capabilities provided by their cloud service providers and determine whether they are sufficient for agency needs.,7494,All Classifications,Must,"Cloud Computing,Governance,Public cloud security,Event Logging",Public Cloud Security,23,Logging and Alerting in Public Cloud,23.5,Logging public cloud events,23.5.10,Y
+23.5.11.C.01.,"Agencies MUST ensure that logs associated with public cloud services are collected, protected, and that their integrity can be confirmed in accordance with the agency’s documented logging requirements.",7496,All Classifications,Must,"Cloud Computing,Governance,Public cloud security,Assurance,Event Logging",Public Cloud Security,23,Logging and Alerting in Public Cloud,23.5,Logging requirements,23.5.11,Y
+23.5.12.C.01.,Agencies MUST ensure that cloud service provider logs are incorporated into overall enterprise logging and alerting systems or procedures in a timely manner to detect information security incidents.,7498,All Classifications,Must,"Cloud Computing,Governance,Public cloud security,Event Logging,Information Security Incidents",Public Cloud Security,23,Logging and Alerting in Public Cloud,23.5,Detecting information security incidents in public cloud ,23.5.12,Y
+23.5.12.C.02.,Agencies SHOULD ensure that tools and procedures used to detect potential information security incidents account for the public cloud services being consumed by the agency.,7499,All Classifications,Should,"Cloud Computing,Governance,Public cloud security,Event Logging,Information Security Incidents",Public Cloud Security,23,Logging and Alerting in Public Cloud,23.5,Detecting information security incidents in public cloud ,23.5.12,Y
+4.4.5.C.04.,"Agencies SHOULD ensure information security monitoring, logging and auditing is conducted on all accredited systems.",602,All Classifications,Should,"Governance,Accreditation",System Certification and Accreditation,4,Accreditation Framework,4.4,Accreditation,4.4.5,Y
+5.5.4.C.01.,"The following procedures SHOULD be documented in the ITSMs SOPs.
+
+
+Topic
+Procedures to be included
+
+
+Access control
+Authorising access rights to applications and data.
+
+
+Asset Musters
+Labelling, registering and mustering assets, including media.
+
+
+Audit logs
+Reviewing system audit trails and manual logs, particularly for privileged users.
+
+
+Configuration control
+Approving and releasing changes to the system software or configurations.
+
+
+Information security incidents
+Detecting, reporting and managing potential information security incidents.
+
+
+ 
+Establishing the cause of any information security incident, whether accidental or deliberate.
+
+
+ 
+Actions to be taken to recover and minimise the exposure from an information security incident.
+
+
+ 
+Additional actions to prevent reoccurrence.
+
+
+Data transfers
+Managing the review of media containing classified information that is to be transferred off-site.
+
+
+ 
+Managing the review of incoming media for malware or unapproved software.
+
+
+IT equipment
+Managing the disposal &amp; destruction of unserviceable IT equipment and media.
+
+
+System Patching
+Advising and recommending system patches, updates and version changes based on security notices and related advisories.
+
+
+System integrity audit
+Reviewing system user accounts, system parameters and access controls to ensure that the system is secure.
+
+
+ 
+Checking the integrity of system software.
+
+
+ 
+Testing access controls.
+
+
+System maintenance
+
+Managing the ongoing security and functionality of system software, including: maintaining awareness of current software vulnerabilities, testing and applying software patches/updates/signatures, and applying appropriate hardening techniques.
+
+
+
+User account management
+Authorising new system users.
+
+
+",849,All Classifications,Should,"Governance,Information Security Documentation,SOPs",Information security documentation,5,Standard Operating Procedures,5.5,ITSM SOPs,5.5.4,Y
+5.5.5.C.01.,"The following procedures SHOULD be documented in the system administrator’s SOPs. 
+
+
+Topic
+Procedures to be included
+
+
+Access control
+Implementing access rights to applications and data.
+
+
+Configuration control
+Implementing changes to the system software or configurations.
+
+
+System backup and recovery
+Backing up data, including audit logs.
+
+
+ 
+Securing backup tapes.
+
+
+ 
+Recovering from system failures.
+
+
+User account management
+Adding and removing system users.
+
+
+ 
+Setting system user privileges.
+
+
+ 
+Cleaning up directories and files when a system user departs or changes roles.
+
+
+Incident response
+Detecting, reporting and managing potential information security incidents.
+
+
+ 
+Establishing the cause of any information security incident, whether accidental or deliberate.
+
+
+ 
+Actions to be taken to recover and minimise the exposure from information security incident.
+
+
+ 
+Additional actions to prevent reoccurrence.
+
+
+",865,All Classifications,Should,"Governance,Information Security Documentation,SOPs",Information security documentation,5,Standard Operating Procedures,5.5,System Administrator SOPs,5.5.5,Y
+7.1.7.C.01.,"Agencies MUST develop, implement and maintain tools and procedures covering the detection of potential information security incidents, incorporating:
+user awareness and training;
+counter-measures against malicious code, known attack methods and types;
+intrusion detection strategies;
+data egress monitoring &amp; control;
+access control anomalies;
+audit analysis;
+system integrity checking; and
+vulnerability assessments.
+",1153,"Top Secret, Confidential, Secret",Must,"Information Security Documentation,Information Security Incidents",Information Security Incidents,7,Detecting Information Security Incidents,7.1,Preventing and detecting information security incidents,7.1.7,Y
+7.1.7.C.02.,"Agencies SHOULD develop, implement and maintain tools and procedures covering the detection of potential information security incidents, incorporating:
+
+user awareness and training;
+counter-measures against malicious code, known attack methods and types;
+intrusion detection strategies;
+dynamic network defence (i.e. protective DNS and/or NGFW)
+data egress monitoring &amp; control;
+access control anomalies;
+audit analysis;
+system integrity checking; and
+vulnerability assessments.
+",1154,All Classifications,Should,"Governance,Information Security Incidents",Information Security Incidents,7,Detecting Information Security Incidents,7.1,Preventing and detecting information security incidents,7.1.7,Y
+7.1.7.C.03.,Agencies SHOULD use the results of the security risk assessment to determine the appropriate balance of resources allocated to prevention versus resources allocated to detection of information security incidents.,1155,All Classifications,Should,"Governance,Information Security Incidents",Information Security Incidents,7,Detecting Information Security Incidents,7.1,Preventing and detecting information security incidents,7.1.7,Y
+7.2.21.C.01.,Agencies that outsource their information technology services and functions MUST ensure that the service provider advises and consults with the agency when an information security incident occurs.,1226,All Classifications,Must,"Governance,Information Security Incidents",Information Security Incidents,7,Reporting Information Security Incidents,7.2,Outsourcing and information security incidents,7.2.21,Y
+7.3.11.C.01.,"Agencies SHOULD:
+transfer a copy of raw audit trails and other relevant data onto media for secure archiving, as well as securing manual log records for retention; and
+ensure that all personnel involved in the investigation maintain a record of actions undertaken to support the investigation.
+",1297,All Classifications,Should,"Technical,Incident Management,Information Security Incidents",Information Security Incidents,7,Managing Information Security Incidents,7.3,Integrity of evidence,7.3.11,Y
+8.2.7.C.01.,"Agencies MUST develop a Site Security Plan (SitePlan) for each server and communications room. Information to be covered includes, but is not limited to:
+a summary of the security risk review for the facility the server or communications room is located in;
+roles and responsibilities of facility and security personnel;
+the administration, operation and maintenance of the electronic access control system or security alarm system;
+key management, the enrolment and removal of system users and issuing of personal identification number codes and passwords;
+personnel security clearances, security awareness training and regular briefings;
+regular inspection of the generated audit trails and logs;
+end of day checks and lockup;
+reporting of information security incidents; and
+what activities to undertake in response to security alarms.
+",1357,All Classifications,Must,"Governance,Physical Security,Site Plan",Physical Security,8,Servers And Network Devices,8.2,Administrative measures - Site security plans,8.2.7,Y
+9.4.10.C.01.,Agencies with a TOP SECRET area within a larger facility MUST maintain a separate log from any general visitor log.,1589,Top Secret,Must,"Governance,Personnel Security",Personnel Security,9,Escorting Uncleared Personnel,9.4,Separate visitor logs,9.4.10,Y
+,,,,,,,,,,,,Y
